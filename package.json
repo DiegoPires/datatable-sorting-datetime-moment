@@ -1,0 +1,30 @@
+{
+  "name": "datatable-sorting-datetime-moment",
+  "version": "1.0.0",
+  "description": "package for the datetime-moment sorting extension from datatable",
+  "main": "index.js",
+  "dependencies": {
+    "datatable": "^2.0.2",
+    "moment": "^2.22.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoPires/datatable-sorting-datetime-moment.git"
+  },
+  "keywords": [
+    "datatable",
+    "sorting",
+    "datetime",
+    "moment"
+  ],
+  "author": "Diego Pires",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoPires/datatable-sorting-datetime-moment/issues"
+  },
+  "homepage": "https://github.com/DiegoPires/datatable-sorting-datetime-moment#readme"
+}
