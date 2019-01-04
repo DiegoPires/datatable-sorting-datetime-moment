@@ -28,8 +28,9 @@
 	}
 }(function ($, moment) {
 
-$.fn.dataTable.moment = function ( format, locale ) {
+$.fn.dataTable.moment = function ( format, locale, strict ) {
 	var types = $.fn.dataTable.ext.type;
+	var strictMode = strict !== 'undefined' ? strict : true;
 
 	// Add type detection
 	types.detect.unshift( function ( d ) {
@@ -48,7 +49,7 @@ $.fn.dataTable.moment = function ( format, locale ) {
 			return 'moment-'+format;
 		}
 
-		return moment( d, format, locale, true ).isValid() ?
+		return moment( d, format, locale, strictMode ).isValid() ?
 			'moment-'+format :
 			null;
 	} );
@@ -65,9 +66,9 @@ $.fn.dataTable.moment = function ( format, locale ) {
 			d = $.trim( d );
 		}
 		
-		return !moment(d, format, locale, true).isValid() ?
+		return !moment(d, format, locale, strictMode).isValid() ?
 			Infinity :
-			parseInt( moment( d, format, locale, true ).format( 'x' ), 10 );
+			parseInt( moment( d, format, locale, strictMode ).format( 'x' ), 10 );
 	};
 };
 
